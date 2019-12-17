@@ -8,6 +8,12 @@
             <a 
                 class="list-group-item" 
                 style="cursor: pointer"
+                <!-- 
+                 - *ngFor is a directive
+                 - there are attribute directives and structural directives
+                 - attribute directives look like a normal HTML attribute, possibly with data or event binding
+                 - structural directives look like a normal HTML attribute but have a leading *. they also  affect an entire area in the DOM (i.e. elements get added or removed)
+                 -->
                 *ngFor="let ingredient of ingredients">
                 {{ ingredient.name }} ({{ ingredient.amount }})
             </a>
