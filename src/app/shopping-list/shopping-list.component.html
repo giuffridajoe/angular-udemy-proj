@@ -1,19 +1,15 @@
 <div class="row">
     <div class="col-xs-10">
-        <app-shopping-list-edit
-            (ingredientAdded)="onIngredientAdded($event)">
-        </app-shopping-list-edit>
+        <app-shopping-list-edit></app-shopping-list-edit>
         <hr>
+        <!-- ngFor is a directive
+        there are attribute directives and structural directives
+        attribute directives look like a normal HTML attribute, possibly with data or event binding
+        structural directives look like a normal HTML attribute but have a leading star. they also affect an entire area in the DOM (i.e. elements get added or removed) -->
         <ul class="list-group">
             <a 
                 class="list-group-item" 
                 style="cursor: pointer"
-                
-                 <!-- - *ngFor is a directive
-                 - there are attribute directives and structural directives
-                 - attribute directives look like a normal HTML attribute, possibly with data or event binding
-                 - structural directives look like a normal HTML attribute but have a leading star. they also  affect an entire area in the DOM (i.e. elements get added or removed) -->
-               
                 *ngFor="let ingredient of ingredients">
                 {{ ingredient.name }} ({{ ingredient.amount }})
             </a>
