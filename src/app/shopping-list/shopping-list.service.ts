@@ -16,4 +16,13 @@ export class ShoppingListService {
         this.ingredients.push(ingredient);
         this.ingredientsChanged.emit(this.ingredients.slice());
     }
+
+    addIngredients(ingredients: Ingredient[]) {
+        // for (let ingredient of this.ingredients) {
+        //     this.addIngredient(ingredient);
+        // }
+        // this is a es6(?) feature called the spread operator (...). it turns an array of elements into a list of elements
+        this.ingredients.push(...ingredients);
+        this.ingredientsChanged.emit(this.ingredients.slice());
+    }
 }
