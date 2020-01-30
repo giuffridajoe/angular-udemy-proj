@@ -18,7 +18,7 @@ export class RecipeService {
 
         new Recipe(
             'Another Test Recipe',
-            'This is a test recipe',
+            'This is a test recipe2',
             'https://cdn.pixabay.com/photo/2016/06/15/19/09/food-1459693_960_720.jpg',
             [
                 new Ingredient('Bread', 1),
@@ -30,6 +30,10 @@ export class RecipeService {
 
     getRecipes() {
         return this.recipes.slice();
+    }
+
+    getRecipe(index: number) {
+        return this.recipes[index];
     }
 
     addIngredientsToShoppingList(ingredients: Ingredient[]) {
